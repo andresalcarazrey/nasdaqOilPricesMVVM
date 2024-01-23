@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        JornadaListViewModel model = new ViewModelProvider(this).get(JornadaListViewModel.class);
-        model.getPrices().observe(this, prices -> {
+        JornadaListViewModel vmodel = new ViewModelProvider(this).get(JornadaListViewModel.class);
+        vmodel.getPrices().observe(this, prices -> {
             // update UI
             // Get a handle to the RecyclerView.
             mRecyclerView = findViewById(R.id.rv_prices);
